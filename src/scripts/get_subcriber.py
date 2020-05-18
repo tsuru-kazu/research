@@ -1,7 +1,7 @@
 from googleapiclient.discovery import build
-import settings
+import os
 
-YOUTUBE_API_KEY = settings.YOUTUBE_API_KEY
+YOUTUBE_API_KEY = os.environ.get("YOUTUBE_API_KEY")
 
 
 def youtube_channel_detail(channel_id, api_key):
