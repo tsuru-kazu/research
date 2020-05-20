@@ -4,7 +4,7 @@ import os
 YOUTUBE_API_KEY = os.environ.get("YOUTUBE_API_KEY")
 
 
-def youtube_channel_detail(channel_id, api_key):
+def get_subscriber(channel_id, api_key=YOUTUBE_API_KEY):
     api_service_name = 'youtube'
     api_version = 'v3'
     youtube = build(api_service_name, api_version, developerKey=api_key)
@@ -13,15 +13,7 @@ def youtube_channel_detail(channel_id, api_key):
         id=channel_id,
     ).execute()
 
-    return search_response['items'][0]
+    return search_response['items']
 
-
-def main():
-
-    d = youtube_channel_detail('UCHVXbQzkl3rDfsXWo8xi2qw', YOUTUBE_API_KEY)
-    print(d['snippet']['title'])
-    print(d['statistics']['subscriberCount'])
-
-
-if __name__ == '__main__':
-    main()
+# subscriber = search_response['items'][0]['statistics']['subscriberCount']
+# return subscriber
