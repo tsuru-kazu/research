@@ -13,7 +13,14 @@ def get_subscriber(channel_id, api_key=YOUTUBE_API_KEY):
         id=channel_id,
     ).execute()
 
-    return search_response['items']
+    subscriber_data = search_response["items"]
+
+    if subscriber_data:
+        subscriber_count = subscriber_data[0]["statistics"]["subscriberCount"]
+        return subscriber_count
+    else:
+        return "No Data"
+
 
 # subscriber = search_response['items'][0]['statistics']['subscriberCount']
 # return subscriber

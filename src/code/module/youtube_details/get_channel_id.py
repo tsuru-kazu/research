@@ -13,8 +13,11 @@ def get_channel_id(video_id, api_key=YOUTUBE_API_KEY):
         id=video_id
     ).execute()
 
-    return search_response["items"]
+    channel_data = search_response["items"]
 
-# channel_id = search_response['items'][0]["snippet"]["channelId"]
-# return channel_id
+    if channel_data:
+        channel_id = channel_data[0]["snippet"]["channelId"]
+        return channel_id
+    else:
+        return "No Data"
 
