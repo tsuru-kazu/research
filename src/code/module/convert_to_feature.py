@@ -1,6 +1,6 @@
 import pandas as pd
 
-from .base import Feature, get_arguments, generate_features
+from base import Feature, get_arguments, generate_features
 
 Feature.dir = 'features'
 
@@ -17,13 +17,11 @@ if __name__ == '__main__':
     train = pd.read_csv('./data/input/CAvideos.csv')
     test = pd.read_csv('./data/input/CAvideos.csv')
 
-    print("globals(): {}".format(globals()))
-
     generate_features(globals(), args.force)
 
 """
 実行方法
-srcディレクトリの中で、
-python -m scripts/convert_feature
+codeディレクトリの中で、
+python -m module/convert_feature
 を実行する
 """
