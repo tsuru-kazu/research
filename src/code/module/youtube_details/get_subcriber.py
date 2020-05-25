@@ -13,14 +13,18 @@ def get_subscriber(channel_id, api_key=YOUTUBE_API_KEY):
         id=channel_id,
     ).execute()
 
-    subscriber_data = search_response["items"]
-
-    if subscriber_data:
-        subscriber_count = subscriber_data[0]["statistics"]["subscriberCount"]
-        return subscriber_count
+    if 'items' in search_response:
+        subscriber_data = search_response['items']
+        if subscriber_data:
+            subscriber_count = subscriber_data[0]["statistics"]["subscriberCount"]
+            return subscriber_count
+        else:
+            return "No Data"
     else:
         return "No Data"
 
 
-# subscriber = search_response['items'][0]['statistics']['subscriberCount']
-# return subscriber
+"""
+api_keyに関しては、pycharmのシェルでプログラムを実行する際は、GOOGLE_APPLICATION_CREDENTIALSという環境変数を
+設定するので必要ないが、ローカルのシェルで実行する際は、必要である
+"""
