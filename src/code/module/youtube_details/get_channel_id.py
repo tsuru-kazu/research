@@ -1,7 +1,7 @@
 from googleapiclient.discovery import build
 import os
 
-YOUTUBE_API_KEY = os.environ.get('YOUTUBE_API_KEY')
+YOUTUBE_API_KEY = os.environ.get("YOUTUBE_API_KEY")
 
 
 def get_channel_id(video_id, api_key=YOUTUBE_API_KEY):
@@ -21,3 +21,8 @@ def get_channel_id(video_id, api_key=YOUTUBE_API_KEY):
     else:
         return "No Data"
 
+
+"""
+api_keyに関しては、pycharmのシェルでプログラムを実行する際は、GOOGLE_APPLICATION_CREDENTIALSという環境変数を
+設定するので必要ないが、ローカルのシェルで実行する際は、必要である
+"""
