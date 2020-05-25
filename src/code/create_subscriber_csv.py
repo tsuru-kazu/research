@@ -6,9 +6,11 @@ from module.youtube_details.get_subcriber import get_subscriber
 
 def main():
     channel_id = read_channel_id_csv()
-    subscriber = pass_subscriber(channel_id)
+    receive_subscriber = pass_subscriber(channel_id)
 
-    get_logger().info(subscriber)
+    get_logger().info(receive_subscriber)
+
+    write_subscriber_to_csv(receive_subscriber)
 
 
 def read_channel_id_csv():
@@ -21,19 +23,21 @@ def read_channel_id_csv():
 def pass_subscriber(channel_id):
     push_subscriber = {}
 
-    for idx, ci in enumerate(list(channel_id)):
-        if idx == 5:
-            break
+    for idx, ci in enumerate(list(channel_id)[:5]):
+        if ci == "No Data":
+            continue
 
         subscriber = get_subscriber(ci)
         push_subscriber[ci] = subscriber
-        print("get: " + subscriber)
+        print(idx, "get: " + subscriber)
 
     return push_subscriber
 
 
-def write_subscriber_to_csv():
-    pass
+def write_subscriber_to_csv(subscriber):
+    channel_id, subscriber_count = list(subscriber.keys()), list(subscriber.values())
+    df = pd.DataFrame({'channel_id': channel_id, 'subscriber_count': subscriber_count})
+    df.to_csv('../data/input/subscriber.csv', mode="a")
 
 
 if __name__ == '__main__':

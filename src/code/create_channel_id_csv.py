@@ -14,8 +14,8 @@ def main():
 
 def pass_channel_id(video_id):
     push_channel_id = {}
-
-    for idx, vi in enumerate(video_id[120:150]):
+    # 一度に回すループ数は30ぐらい
+    for idx, vi in enumerate(video_id[390:420]):
         channel_id = get_channel_id(vi)
         push_channel_id[vi] = channel_id
         print(idx, "get: " + channel_id)
@@ -27,7 +27,7 @@ def pass_channel_id(video_id):
 
 def write_channel_id_to_csv(rci):
     video_id, channel_id = list(rci.keys()), list(rci.values())
-    df = pd.DataFrame({"video_id": video_id, "channel_id": channel_id}, index=None)
+    df = pd.DataFrame({"video_id": video_id, "channel_id": channel_id})
     df.to_csv("../data/input/channel_id.csv", mode="a", header=False)
 
     get_logger().info("DONE: write to csv")
@@ -35,5 +35,3 @@ def write_channel_id_to_csv(rci):
 
 if __name__ == '__main__':
     main()
-
-# df.to_csv('../data/input/channel_id.csv', mode='a', header=False)
