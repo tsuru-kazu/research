@@ -8,12 +8,10 @@ verify_ssl = true
 [packages]
 pandas = "*"
 scikit-learn = "*"
-numpy = "*"
-seaborn = "*"
-matplotlib = "*"
 jupyterlab = "*"
+numpy = "*"
 google-api-python-client = "*"
-python-dotenv = "*"
+seaborn = "*"
 
 [requires]
-python_version = "3.6"
+python_version = "3.8"

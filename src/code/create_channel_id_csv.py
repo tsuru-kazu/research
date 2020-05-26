@@ -15,7 +15,7 @@ def main():
 def pass_channel_id(video_id):
     push_channel_id = {}
     # 一度に回すループ数は30ぐらい
-    for idx, vi in enumerate(video_id[390:420]):
+    for idx, vi in enumerate(video_id[420:450]):
         channel_id = get_channel_id(vi)
         push_channel_id[vi] = channel_id
         print(idx, "get: " + channel_id)
