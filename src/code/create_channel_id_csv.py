@@ -1,8 +1,9 @@
 import pandas as pd
 import codecs
 from typing import NoReturn
-from .module.create_log.get_logger import get_logger
-from .module.youtube_details.get_channel_id import get_channel_id
+# 自作モジュールをインポート
+from module.create_log.get_logger import get_logger
+from module.youtube_details.get_channel_id import get_channel_id
 
 
 def main() -> NoReturn :
