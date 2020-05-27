@@ -8,4 +8,5 @@ output/
 *~
 *.swp
 .env
-keen-hope-277608-cd5e369a9421.json
+keen-hope-277608-7856986b7fb5.json
+.mypy_cache

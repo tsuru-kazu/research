@@ -1,10 +1,11 @@
-from googleapiclient.discovery import build
+from googleapiclient.discovery import build # type: ignore
 import os
+from typing import Union
 
 YOUTUBE_API_KEY = os.environ.get("YOUTUBE_API_KEY")
 
 
-def get_subscriber(channel_id, api_key=YOUTUBE_API_KEY):
+def get_subscriber(channel_id: str, api_key: str = YOUTUBE_API_KEY) -> Union[str, int]:
     api_service_name = 'youtube'
     api_version = 'v3'
     youtube = build(api_service_name, api_version, developerKey=api_key)
@@ -13,15 +14,19 @@ def get_subscriber(channel_id, api_key=YOUTUBE_API_KEY):
         id=channel_id,
     ).execute()
 
+    subscriber_count: Union[str, int]
+
     if 'items' in search_response:
         subscriber_data = search_response['items']
         if subscriber_data:
-            subscriber_count = subscriber_data[0]["statistics"]["subscriberCount"]
+            subscriber_count = int(subscriber_data[0]["statistics"]["subscriberCount"])
             return subscriber_count
         else:
-            return "No Data"
+            subscriber_count = "No Data"
+            return subscriber_count
     else:
-        return "No Data"
+        subscriber_count = "No Data"
+        return subscriber_count
 
 
 """

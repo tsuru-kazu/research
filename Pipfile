@@ -3,6 +3,10 @@ name = "pypi"
 url = "https://pypi.org/simple"
 verify_ssl = true
 
+[scripts]
+tc-sub = "mypy ./create_subscriber_csv.py --config-file ./.mypy.ini"
+tc-ci = "mypy ./create_channel_id_csv.py --config-file ./.mypy.ini"
+
 [dev-packages]
 
 [packages]
@@ -12,6 +16,7 @@ jupyterlab = "*"
 numpy = "*"
 google-api-python-client = "*"
 seaborn = "*"
+mypy = "*"
 
 [requires]
 python_version = "3.8"

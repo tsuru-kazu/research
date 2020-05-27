@@ -1,10 +1,10 @@
-from googleapiclient.discovery import build
+from googleapiclient.discovery import build # type: ignore
 import os
 
 YOUTUBE_API_KEY = os.environ.get("YOUTUBE_API_KEY")
 
 
-def get_channel_id(video_id, api_key=YOUTUBE_API_KEY):
+def get_channel_id(video_id, api_key=YOUTUBE_API_KEY) -> str:
     api_service_name = 'youtube'
     api_version = 'v3'
     youtube = build(api_service_name, api_version, developerKey=api_key)
