@@ -5,7 +5,7 @@ from typing import Union
 YOUTUBE_API_KEY = os.environ.get("YOUTUBE_API_KEY")
 
 
-def get_subscriber(channel_id: str, api_key: str = YOUTUBE_API_KEY) -> Union[str, int]:
+def get_subscriber(channel_id: str, api_key: str = YOUTUBE_API_KEY) -> str:
     api_service_name = 'youtube'
     api_version = 'v3'
     youtube = build(api_service_name, api_version, developerKey=api_key)
@@ -14,12 +14,12 @@ def get_subscriber(channel_id: str, api_key: str = YOUTUBE_API_KEY) -> Union[str
         id=channel_id,
     ).execute()
 
-    subscriber_count: Union[str, int]
+    subscriber_count: str
 
     if 'items' in search_response:
         subscriber_data = search_response['items']
         if subscriber_data:
-            subscriber_count = int(subscriber_data[0]["statistics"]["subscriberCount"])
+            subscriber_count = str(subscriber_data[0]["statistics"]["subscriberCount"])
             return subscriber_count
         else:
             subscriber_count = "No Data"

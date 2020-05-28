@@ -1,6 +1,6 @@
 import pandas as pd
 import codecs
-from typing import List, Dict, Union, NoReturn
+from typing import List, Dict, NoReturn
 # 自作モジュールをインポート
 from module.create_log.get_logger import get_logger  # type: ignore
 from module.youtube_details.get_subcriber import get_subscriber  # type: ignore
@@ -21,14 +21,14 @@ def read_channel_id_csv() -> List[str]:
         return channel_id_list
 
 
-def pass_subscriber(channel_id_list: List[str]) -> Dict[str, int]:
-    push_subscriber: Dict[str, int] = {}
+def pass_subscriber(channel_id_list: List[str]) -> Dict[str, str]:
+    push_subscriber: Dict[str, str] = {}
 
     for idx, channel_id in enumerate(channel_id_list[:5]):
         if channel_id == "No Data":
             continue
 
-        subscriber: Union[str, int] = get_subscriber(channel_id)
+        subscriber: str = get_subscriber(channel_id)
         push_subscriber[channel_id] = subscriber
         print(idx, "get: ", subscriber)
 
