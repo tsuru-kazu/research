@@ -1,0 +1,187 @@
+{
+    "5ugKfHgsmYw": {
+        "kind": "youtube#videoListResponse",
+        "etag": "lctOmRQ8p7KKIyXNFCuXFTVSYLM",
+        "items": [
+            {
+                "kind": "youtube#video",
+                "etag": "qMkVDmirUhTm3A-U2rPhDC4j35A",
+                "id": "5ugKfHgsmYw",
+                "snippet": {
+                    "publishedAt": "2018-02-06T03:04:37Z",
+                    "channelId": "UCNLxBzguoGLqXWA8_BtHSHA",
+                    "title": "陸自ヘリ、垂直に落下＝路上の車が撮影",
+                    "description": "佐賀県神埼市の民家に墜落した陸上自衛隊のＡＨ６４Ｄ戦闘ヘリコプターが垂直に落下する様子を、近くにいた車のドライブレコーダーが捉えていたことが６日分かった。\n　現場の南から撮影された映像では、東から西に飛行するヘリが突然、機首を下に向けてきりもみ回転するように落下。ヘリの急降下と同時に、機体の一部とみられる物体が落ちていく様子も映っていた。\n　録画した佐賀城北自動車学校（佐賀市）によると、撮影場所は現場から約１．５キロメートル南の神埼市内の路上。時間調整のため停車していた送迎車のドライブレコーダーに、偶然映り込んでいたという。佐賀城北自動車学校提供。【時事通信映像センター】",
+                    "thumbnails": {
+                        "default": {
+                            "url": "https://i.ytimg.com/vi/5ugKfHgsmYw/default.jpg",
+                            "width": 120,
+                            "height": 90
+                        },
+                        "medium": {
+                            "url": "https://i.ytimg.com/vi/5ugKfHgsmYw/mqdefault.jpg",
+                            "width": 320,
+                            "height": 180
+                        },
+                        "high": {
+                            "url": "https://i.ytimg.com/vi/5ugKfHgsmYw/hqdefault.jpg",
+                            "width": 480,
+                            "height": 360
+                        },
+                        "standard": {
+                            "url": "https://i.ytimg.com/vi/5ugKfHgsmYw/sddefault.jpg",
+                            "width": 640,
+                            "height": 480
+                        }
+                    },
+                    "channelTitle": "時事通信映像センター",
+                    "tags": [
+                        "事故",
+                        "佐賀",
+                        "佐賀県",
+                        "ヘリコプター",
+                        "ヘリ",
+                        "自衛隊",
+                        "墜落",
+                        "落下",
+                        "現場",
+                        "神埼市",
+                        "ドライブレコーダー",
+                        "時事通信"
+                    ],
+                    "categoryId": "25",
+                    "liveBroadcastContent": "none",
+                    "defaultLanguage": "ja",
+                    "localized": {
+                        "title": "陸自ヘリ、垂直に落下＝路上の車が撮影",
+                        "description": "佐賀県神埼市の民家に墜落した陸上自衛隊のＡＨ６４Ｄ戦闘ヘリコプターが垂直に落下する様子を、近くにいた車のドライブレコーダーが捉えていたことが６日分かった。\n　現場の南から撮影された映像では、東から西に飛行するヘリが突然、機首を下に向けてきりもみ回転するように落下。ヘリの急降下と同時に、機体の一部とみられる物体が落ちていく様子も映っていた。\n　録画した佐賀城北自動車学校（佐賀市）によると、撮影場所は現場から約１．５キロメートル南の神埼市内の路上。時間調整のため停車していた送迎車のドライブレコーダーに、偶然映り込んでいたという。佐賀城北自動車学校提供。【時事通信映像センター】"
+                    },
+                    "defaultAudioLanguage": "ja"
+                }
+            }
+        ],
+        "pageInfo": {
+            "totalResults": 1,
+            "resultsPerPage": 1
+        }
+    },
+    "ohObafdd34Y": {
+        "kind": "youtube#videoListResponse",
+        "etag": "J_sf5_UucKfuXZqo6yZRywnDj94",
+        "items": [],
+        "pageInfo": {
+            "totalResults": 0,
+            "resultsPerPage": 0
+        }
+    },
+    "aBr2kKAHN6M": {
+        "kind": "youtube#videoListResponse",
+        "etag": "yIe6SP3BDuQnalofkwguqGvd5mk",
+        "items": [
+            {
+                "kind": "youtube#video",
+                "etag": "f9qzuUBELhPDZD4NxRMXikH6LmM",
+                "id": "aBr2kKAHN6M",
+                "snippet": {
+                    "publishedAt": "2018-02-08T02:15:50Z",
+                    "channelId": "UCtI0Hodo5o5dUb67FeUjDeA",
+                    "title": "Live Views of Starman",
+                    "description": "",
+                    "thumbnails": {
+                        "default": {
+                            "url": "https://i.ytimg.com/vi/aBr2kKAHN6M/default.jpg",
+                            "width": 120,
+                            "height": 90
+                        },
+                        "medium": {
+                            "url": "https://i.ytimg.com/vi/aBr2kKAHN6M/mqdefault.jpg",
+                            "width": 320,
+                            "height": 180
+                        },
+                        "high": {
+                            "url": "https://i.ytimg.com/vi/aBr2kKAHN6M/hqdefault.jpg",
+                            "width": 480,
+                            "height": 360
+                        }
+                    },
+                    "channelTitle": "SpaceX",
+                    "categoryId": "28",
+                    "liveBroadcastContent": "none",
+                    "localized": {
+                        "title": "Live Views of Starman",
+                        "description": ""
+                    },
+                    "defaultAudioLanguage": "en"
+                }
+            }
+        ],
+        "pageInfo": {
+            "totalResults": 1,
+            "resultsPerPage": 1
+        }
+    },
+    "5wNnwChvmsQ": {
+        "kind": "youtube#videoListResponse",
+        "etag": "J_sf5_UucKfuXZqo6yZRywnDj94",
+        "items": [],
+        "pageInfo": {
+            "totalResults": 0,
+            "resultsPerPage": 0
+        }
+    },
+    "B7J47qFvdsk": {
+        "kind": "youtube#videoListResponse",
+        "etag": "3KaRgw5FaGG3YIjZjXBJEhI_RDc",
+        "items": [
+            {
+                "kind": "youtube#video",
+                "etag": "jwFquIkEP4zN9e3vPKa9ZG8hGSY",
+                "id": "B7J47qFvdsk",
+                "snippet": {
+                    "publishedAt": "2018-02-06T02:30:00Z",
+                    "channelId": "UCRxDTCmIjgli-Xgh2KPE9dA",
+                    "title": "榮倉奈々、衝撃の死んだふり！映画『家に帰ると妻が必ず死んだふりをしています。』特報",
+                    "description": "家に帰ってきたサラリーマンのじゅん（安田顕）は、玄関で血を出して倒れている妻ちえ（榮倉奈々）の姿を目にして驚く。だが、血はケチャップで彼女は死んだふりをしているだけだった。驚く夫を見てほくそ笑むちえ。それを境に彼女は、ワニに食われたり、銃で撃たれたり、頭に矢が突き刺さったりと、さまざまなシチュエーションで死んだふりをするように。あきれるじゅんだったが、理由も言わずに奇怪な行動を続けるちえに対して不安を覚える。やがて、それらが彼女の発する何かのサインではないかと考えるが……。\n作品情報：https://www.cinematoday.jp/movie/T0022081\n公式サイト：http://tsumafuri.jp/\n(C) 2018「家に帰ると妻が必ず死んだふりをしています。」製作委員会",
+                    "thumbnails": {
+                        "default": {
+                            "url": "https://i.ytimg.com/vi/B7J47qFvdsk/default.jpg",
+                            "width": 120,
+                            "height": 90
+                        },
+                        "medium": {
+                            "url": "https://i.ytimg.com/vi/B7J47qFvdsk/mqdefault.jpg",
+                            "width": 320,
+                            "height": 180
+                        },
+                        "high": {
+                            "url": "https://i.ytimg.com/vi/B7J47qFvdsk/hqdefault.jpg",
+                            "width": 480,
+                            "height": 360
+                        },
+                        "standard": {
+                            "url": "https://i.ytimg.com/vi/B7J47qFvdsk/sddefault.jpg",
+                            "width": 640,
+                            "height": 480
+                        },
+                        "maxres": {
+                            "url": "https://i.ytimg.com/vi/B7J47qFvdsk/maxresdefault.jpg",
+                            "width": 1280,
+                            "height": 720
+                        }
+                    },
+                    "channelTitle": "シネマトゥデイ",
+                    "categoryId": "1",
+                    "liveBroadcastContent": "none",
+                    "localized": {
+                        "title": "榮倉奈々、衝撃の死んだふり！映画『家に帰ると妻が必ず死んだふりをしています。』特報",
+                        "description": "家に帰ってきたサラリーマンのじゅん（安田顕）は、玄関で血を出して倒れている妻ちえ（榮倉奈々）の姿を目にして驚く。だが、血はケチャップで彼女は死んだふりをしているだけだった。驚く夫を見てほくそ笑むちえ。それを境に彼女は、ワニに食われたり、銃で撃たれたり、頭に矢が突き刺さったりと、さまざまなシチュエーションで死んだふりをするように。あきれるじゅんだったが、理由も言わずに奇怪な行動を続けるちえに対して不安を覚える。やがて、それらが彼女の発する何かのサインではないかと考えるが……。\n作品情報：https://www.cinematoday.jp/movie/T0022081\n公式サイト：http://tsumafuri.jp/\n(C) 2018「家に帰ると妻が必ず死んだふりをしています。」製作委員会"
+                    }
+                }
+            }
+        ],
+        "pageInfo": {
+            "totalResults": 1,
+            "resultsPerPage": 1
+        }
+    }
+}

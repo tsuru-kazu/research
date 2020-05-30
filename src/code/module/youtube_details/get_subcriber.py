@@ -1,6 +1,6 @@
 from googleapiclient.discovery import build  # type: ignore
 import os
-from typing import Union
+from typing import Dict
 
 YOUTUBE_API_KEY = os.environ.get("YOUTUBE_API_KEY")
 
@@ -9,7 +9,7 @@ def get_subscriber(channel_id: str, api_key: str = YOUTUBE_API_KEY) -> str:
     api_service_name = 'youtube'
     api_version = 'v3'
     youtube = build(api_service_name, api_version, developerKey=api_key)
-    search_response = youtube.channels().list(
+    search_response: Dict = youtube.channels().list(
         part='snippet,statistics',
         id=channel_id,
     ).execute()

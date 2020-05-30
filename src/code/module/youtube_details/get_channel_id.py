@@ -1,6 +1,6 @@
 from googleapiclient.discovery import build  # type: ignore
 import os
-from typing import Dict
+from typing import List
 
 YOUTUBE_API_KEY: str = os.environ.get("YOUTUBE_API_KEY")
 
@@ -14,7 +14,7 @@ def get_channel_id(video_id: str, api_key: str = YOUTUBE_API_KEY) -> str:
         id=video_id
     ).execute()
 
-    channel_data: Dict = search_response["items"]
+    channel_data: List = search_response["items"]
 
     if channel_data:
         channel_id: str = channel_data[0]["snippet"]["channelId"]
