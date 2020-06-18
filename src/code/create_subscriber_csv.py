@@ -8,7 +8,7 @@ from module.youtube_details.get_subcriber import get_subscriber  # type: ignore
 
 def main() -> NoReturn:
     channel_id_list = read_channel_id_csv()
-    receive_subscriber = pass_subscriber(channel_id_list)
+    receive_subscriber = fetch_subscriber(channel_id_list)
     get_logger().info(receive_subscriber)
 
     write_subscriber_to_csv(receive_subscriber)
@@ -21,10 +21,10 @@ def read_channel_id_csv() -> List[str]:
         return channel_id_list
 
 
-def pass_subscriber(channel_id_list: List[str]) -> Dict[str, str]:
+def fetch_subscriber(channel_id_list: List[str]) -> Dict[str, str]:
     push_subscriber: Dict[str, str] = {}
 
-    for idx, channel_id in enumerate(channel_id_list[:5]):
+    for idx, channel_id in enumerate(channel_id_list[:30]):
         if channel_id == "No Data":
             continue
 

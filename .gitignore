@@ -1,8 +1,7 @@
 .idea
 .DS_Store
 __pycache__
-input/
-output/
+data/
 *.gz
 *.pkl
 *~

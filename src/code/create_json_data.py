@@ -8,11 +8,11 @@ def main():
     df = pd.read_csv('../data/input/video_id.csv')
     video_id: List[str] = list(df["video_id"])
     youtube_data_json = {}
-    for vi in video_id[:5]:
-        data = get_json_data(vi)
-        youtube_data_json[vi] = data
+    for idx, vi in enumerate(video_id[120:150]):
+        youtube_data_json[vi] = get_json_data(vi)
+        print(idx+1, "get")
 
-    with open('../data/external/youtube.json', 'a') as f:
+    with open('../data/external/youtube5.json', 'a') as f:
         json.dump(youtube_data_json, f, ensure_ascii=False, indent=4, separators=(',', ': '))
 
 
