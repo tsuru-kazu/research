@@ -18,6 +18,9 @@ google-api-python-client = "*"
 seaborn = "*"
 mypy = "*"
 flake8 = "*"
+janome = "*"
+mecab-python3 = "*"
+gensim = "*"
 
 [requires]
 python_version = "3.8"
