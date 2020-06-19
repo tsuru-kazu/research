@@ -17,6 +17,7 @@ numpy = "*"
 google-api-python-client = "*"
 seaborn = "*"
 mypy = "*"
+flake8 = "*"
 
 [requires]
 python_version = "3.8"

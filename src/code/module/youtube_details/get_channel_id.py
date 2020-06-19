@@ -1,10 +1,11 @@
-from googleapiclient.discovery import build # type: ignore
+from googleapiclient.discovery import build  # type: ignore
 import os
+from typing import List
 
-YOUTUBE_API_KEY = os.environ.get("YOUTUBE_API_KEY")
+YOUTUBE_API_KEY: str = os.environ.get("YOUTUBE_API_KEY")
 
 
-def get_channel_id(video_id, api_key=YOUTUBE_API_KEY) -> str:
+def get_channel_id(video_id: str, api_key: str = YOUTUBE_API_KEY) -> str:
     api_service_name = 'youtube'
     api_version = 'v3'
     youtube = build(api_service_name, api_version, developerKey=api_key)
@@ -13,10 +14,10 @@ def get_channel_id(video_id, api_key=YOUTUBE_API_KEY) -> str:
         id=video_id
     ).execute()
 
-    channel_data = search_response["items"]
+    channel_data: List = search_response["items"]
 
     if channel_data:
-        channel_id = channel_data[0]["snippet"]["channelId"]
+        channel_id: str = channel_data[0]["snippet"]["channelId"]
         return channel_id
     else:
         return "No Data"
