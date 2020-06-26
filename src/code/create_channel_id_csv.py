@@ -15,7 +15,7 @@ def main() -> NoReturn:
 def fetch_channel_id(video_id) -> Dict[str, str]:
     push_channel_id: Dict[str, str] = {}
     # 一度に回すループ数は30ぐらい
-    for idx, vi in enumerate(video_id[13660:13690]):
+    for idx, vi in enumerate(video_id[20500:20523]):
         channel_id: str = get_channel_id(vi)
         push_channel_id[vi] = channel_id
         print(idx+1, "get: " + channel_id)
