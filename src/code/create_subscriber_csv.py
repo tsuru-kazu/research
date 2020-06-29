@@ -12,23 +12,23 @@ class Subscriber:
         self.stop = stop
         with codecs.open("../data/input/channel_id.csv", "r", "utf-8", "ignore") as file:
             df = pd.read_table(file, delimiter=",")
-            self.channel_id = list(df["channel_id"])
+        self.channel_id = list(df["channel_id"])
         self.subscriber = {}
 
     def get(self):
-        for idx, ci in enumerate(self.channel_id[self.start:self.stop]):
-            if ci == "No Data":
+        for idx, c_i in enumerate(self.channel_id[self.start:self.stop]):
+            if c_i == "No Data":
                 continue
 
-            self.subscriber[ci] = get_subscriber(ci)
-            print(idx, "get: ", self.subscriber[ci])
+            self.subscriber[c_i] = get_subscriber(c_i)
+            print(idx, "get: ", self.subscriber[c_i])
 
         get_logger().info("DONE: GET Subscriber ")
 
     def write(self):
-        ci = list(self.subscriber.keys())
-        sc = list(self.subscriber.values())
-        df = pd.DataFrame({'channel_id': ci, 'subscriber_count': sc})
+        c_i = list(self.subscriber.keys())
+        s_c = list(self.subscriber.values())
+        df = pd.DataFrame({'channel_id': c_i, 'subscriber_count': s_c})
 
         df.to_csv('../data/input/subscriber.csv', mode="a", header=False)
 
@@ -38,5 +38,5 @@ class Subscriber:
 
 
 if __name__ == '__main__':
-    s = Subscriber(990, 1020)
+    s = Subscriber(1980, 2010)
     s.run()

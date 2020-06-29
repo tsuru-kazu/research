@@ -14,16 +14,16 @@ class ChannelId:
         self.channel_id = {}
 
     def get(self):
-        for idx, vi in enumerate(self.video_id[self.start:self.stop]):
-            self.channel_id[vi] = get_channel_id(vi)
-            print(idx + 1, "get: " + self.channel_id[vi])
+        for idx, v_i in enumerate(self.video_id[self.start:self.stop]):
+            self.channel_id[v_i] = get_channel_id(v_i)
+            print(idx + 1, "get: " + self.channel_id[v_i])
 
         get_logger().info("DONE: GET Channel ID ")
 
     def write(self):
-        vi = list(self.channel_id.keys())
-        ci = list(self.channel_id.values())
-        df = pd.DataFrame({"video_id": vi, "channel_id": ci})
+        v_i = list(self.channel_id.keys())
+        c_i = list(self.channel_id.values())
+        df = pd.DataFrame({"video_id": v_i, "channel_id": c_i})
         df.to_csv("../data/input/channel_id_no_data.csv", mode="a", header=False)
 
         get_logger().info("DONE: write to csv")
