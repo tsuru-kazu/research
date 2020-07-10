@@ -1,48 +1,42 @@
 import pandas as pd
 import codecs
-from typing import List, Dict, NoReturn
 # 自作モジュールをインポート
 from module.create_log.get_logger import get_logger  # type: ignore
 from module.youtube_details.get_subcriber import get_subscriber  # type: ignore
 
 
-def main() -> NoReturn:
-    channel_id_list = read_channel_id_csv()
-    receive_subscriber = fetch_subscriber(channel_id_list)
-    get_logger().info(receive_subscriber)
+class Subscriber:
 
-    write_subscriber_to_csv(receive_subscriber)
+    def __init__(self, start, stop):
+        self.start = start
+        self.stop = stop
+        with codecs.open("../data/input/channel_id.csv", "r", "utf-8", "ignore") as f:
+            df = pd.read_table(f, delimiter=",")
+        self.channel_id = list(df["channel_id"])
+        self.subscriber = {}
 
+    def get(self):
+        for idx, c_i in enumerate(self.channel_id[self.start:self.stop]):
+            if c_i == "No Data":
+                continue
 
-def read_channel_id_csv() -> List[str]:
-    with codecs.open("../data/input/channel_id.csv", "r", "utf-8", "ignore") as file:
-        df = pd.read_table(file, delimiter=",")
-        channel_id_list: List[str] = list(df['channel_id'])
-        return channel_id_list
+            self.subscriber[c_i] = get_subscriber(c_i)
+            print(idx, "get: ", self.subscriber[c_i])
 
+        get_logger().info("DONE: GET Subscriber ")
 
-def fetch_subscriber(channel_id_list: List[str]) -> Dict[str, str]:
-    push_subscriber: Dict[str, str] = {}
+    def write(self):
+        c_i = list(self.subscriber.keys())
+        s_c = list(self.subscriber.values())
+        df = pd.DataFrame({'channel_id': c_i, 'subscriber_count': s_c})
 
-    for idx, channel_id in enumerate(channel_id_list[:30]):
-        if channel_id == "No Data":
-            continue
+        df.to_csv('../data/input/subscriber.csv', mode="a", header=False)
 
-        subscriber: str = get_subscriber(channel_id)
-        push_subscriber[channel_id] = subscriber
-        print(idx, "get: ", subscriber)
-
-    return push_subscriber
-
-
-def write_subscriber_to_csv(subscriber_dict: Dict) -> NoReturn:
-    channel_id: List[str] = list(subscriber_dict.keys())
-    subscriber_count: List[int] = list(subscriber_dict.values())
-
-    df = pd.DataFrame({'channel_id': channel_id, 'subscriber_count': subscriber_count})
-
-    df.to_csv('../data/input/subscriber.csv', mode="a")
+    def run(self):
+        self.get()
+        self.write()
 
 
 if __name__ == '__main__':
-    main()
+    s = Subscriber(4970, 5000)
+    s.run()
