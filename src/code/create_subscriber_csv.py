@@ -10,8 +10,8 @@ class Subscriber:
     def __init__(self, start, stop):
         self.start = start
         self.stop = stop
-        with codecs.open("../data/input/channel_id.csv", "r", "utf-8", "ignore") as file:
-            df = pd.read_table(file, delimiter=",")
+        with codecs.open("../data/input/channel_id.csv", "r", "utf-8", "ignore") as f:
+            df = pd.read_table(f, delimiter=",")
         self.channel_id = list(df["channel_id"])
         self.subscriber = {}
 
@@ -38,5 +38,5 @@ class Subscriber:
 
 
 if __name__ == '__main__':
-    s = Subscriber(1980, 2010)
+    s = Subscriber(4970, 5000)
     s.run()
