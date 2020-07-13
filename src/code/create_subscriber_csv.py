@@ -38,5 +38,5 @@ class Subscriber:
 
 
 if __name__ == '__main__':
-    s = Subscriber(5990, 6020)
+    s = Subscriber(7940, 7970)
     s.run()
