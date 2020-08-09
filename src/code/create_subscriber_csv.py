@@ -7,6 +7,7 @@ from module.youtube_details.get_subcriber import get_subscriber  # type: ignore
 
 class Subscriber:
 
+    # コンストラクタ ステップ数や使用するデータを初期化
     def __init__(self, start, stop):
         self.start = start
         self.stop = stop
@@ -15,6 +16,7 @@ class Subscriber:
         self.channel_id = list(df["channel_id"])
         self.subscriber = {}
 
+    # チャンネルIDデータをget_subscriber関数の引数に渡し、チャンネル登録者数データを取得
     def get(self):
         for idx, c_i in enumerate(self.channel_id[self.start:self.stop]):
             if c_i == "No Data":
@@ -25,6 +27,7 @@ class Subscriber:
 
         get_logger().info("DONE: GET Subscriber ")
 
+    # チャンネル登録査収とチャンネルIDを保持しているデータフレームをCSVに書き出し
     def write(self):
         c_i = list(self.subscriber.keys())
         s_c = list(self.subscriber.values())
