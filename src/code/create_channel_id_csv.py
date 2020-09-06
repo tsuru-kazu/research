@@ -6,6 +6,7 @@ from module.youtube_details.get_channel_id import get_channel_id
 
 class ChannelId:
 
+    # コンストラクタ ステップ数や使用するデータを初期化
     def __init__(self, start, stop):
         df = pd.read_csv('../data/input/video_id.csv')
         self.video_id = list(df["video_id"])
@@ -13,6 +14,7 @@ class ChannelId:
         self.stop = stop
         self.channel_id = {}
 
+    # video_idデータをget_channel_id関数の引数に渡し、チャンネルIDデータを取得
     def get(self):
         for idx, v_i in enumerate(self.video_id[self.start:self.stop]):
             self.channel_id[v_i] = get_channel_id(v_i)
@@ -20,6 +22,7 @@ class ChannelId:
 
         get_logger().info("DONE: GET Channel ID ")
 
+    # video_idとチャンネルIDデータを保持したデータフレームをCSVに書き出し
     def write(self):
         v_i = list(self.channel_id.keys())
         c_i = list(self.channel_id.values())
