@@ -1,7 +1,6 @@
 .idea
 .DS_Store
 __pycache__
-JPvideos.csv
 JPvideos.csv.zip
 *.gz
 *.pkl
