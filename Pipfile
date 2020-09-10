@@ -11,9 +11,7 @@ tc-ci = "mypy ./create_channel_id_csv.py --config-file ./.mypy.ini"
 
 [packages]
 pandas = "*"
-scikit-learn = "*"
 jupyterlab = "*"
-numpy = "*"
 google-api-python-client = "*"
 seaborn = "*"
 mypy = "*"
@@ -21,6 +19,11 @@ flake8 = "*"
 janome = "*"
 mecab-python3 = "*"
 gensim = "*"
+tqdm = "*"
+scikit-learn = "*"
+scipy = "*"
+numpy = "*"
+nltk = "*"
 
 [requires]
 python_version = "3.8"
