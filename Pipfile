@@ -25,6 +25,8 @@ scipy = "*"
 numpy = "*"
 nltk = "*"
 lightgbm = "*"
+matplotlib-venn = "*"
+xgboost = "*"
 
 [requires]
 python_version = "3.8"
