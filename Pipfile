@@ -27,6 +27,8 @@ nltk = "*"
 lightgbm = "*"
 matplotlib-venn = "*"
 xgboost = "*"
+jupyter = "*"
+optuna = "*"
 
 [requires]
 python_version = "3.8"
