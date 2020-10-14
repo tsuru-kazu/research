@@ -29,6 +29,7 @@ matplotlib-venn = "*"
 xgboost = "*"
 jupyter = "*"
 optuna = "*"
+requests = "*"
 
 [requires]
 python_version = "3.8"
