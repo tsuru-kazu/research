@@ -30,6 +30,9 @@ xgboost = "*"
 jupyter = "*"
 optuna = "*"
 requests = "*"
+graphviz = "*"
+dtreeviz = "*"
+pydotplus = "*"
 
 [requires]
 python_version = "3.8"
